@@ -1,0 +1,906 @@
+/*=========================
+ESTILO GERAL
+=========================*/
+
+*{
+margin:0; /*Remove margens padrão*/
+padding:0; /*Remove espaçamentos padrão*/
+box-sizing:border-box; /*Controla largura corretamente*/
+font-family:'Space Grotesk',sans-serif; /*Fonte do site*/
+}
+
+body{
+background:#050505; /*Fundo*/
+color:white; /*Cor padrão dos textos*/
+min-height:100vh; /*Altura total da tela*/
+}
+
+h2.titulo{
+    font-size:55px; /*Tamanho título*/
+    font-weight:700; /*Fonte grossa*/
+    color:#fff; /*Roxo*/
+    text-align:center; /*Centraliza texto*/
+    margin-bottom:40px; /*Espaço abaixo*/
+}
+
+button:hover{
+box-shadow:0 0 20px #6a00f4; /*Glow*/
+transform:scale(1.05); /*Zoom*/
+}
+
+/*=========================
+CONTAINER PRINCIPAL
+=========================*/
+
+.interface{
+max-width:1280px; /*Largura máxima*/
+margin:0 auto; /*Centraliza*/
+}
+
+/*=========================
+FLEXBOX
+=========================*/
+
+.flex{
+display:flex; /*Deixa lado a lado*/
+justify-content:space-between; /*Separa elementos*/
+align-items:flex-start; /*Alinha no topo*/
+gap:80px; /*Espaço entre texto e foto*/
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header{
+padding:40px 8%; /*Espaçamento interno*/
+}
+
+header>.interface{
+display:flex;
+align-items:center; /*Centraliza verticalmente*/
+justify-content:space-between; /*Separa logo/menu/botão*/
+}
+
+.logo img{
+    width:120px;
+    height:auto;
+    display:block;
+}
+
+/*=========================
+LINKS
+=========================*/
+
+header a{
+color:#d4d4d4; /*Cor dos links*/
+text-decoration:none; /*Remove sublinhado*/
+display:inline-block;
+transition:.3s; /*Animação suave*/
+}
+
+header a:hover{
+color:#fff; /*Cor branca*/
+transform:scale(1.05); /*Zoom*/
+}
+
+/*=========================
+MENU
+=========================*/
+
+header nav ul{
+    list-style:none; /* Remove as bolinhas */
+    display: flex;   /* Alinha todos os itens em linha perfeitamente */
+    align-items: center;
+}
+
+header nav ul li{
+    display:inline-block; /* Itens lado a lado */
+    padding:0 30px; /* Espaçamento equilibrado entre os links */
+}
+
+/* Garante que o link de projetos não herde bordas indesejadas */
+header nav ul li a {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/*=========================
+BOTÃO HEADER
+=========================*/
+
+header .sg-contato button{
+padding:12px 40px; /*Espaço interno*/
+font-size:16px; /*Tamanho texto*/
+font-weight:600; /*Peso da fonte*/
+background:#6a00f4; /*Fundo roxo*/
+color:white;
+border:none; /*Remove borda*/
+border-radius:30px; /*Arredondado*/
+cursor:pointer; /*Mãozinha*/
+transition:.3s;
+}
+
+/*=========================
+TOPO DO SITE
+=========================*/
+
+section.topo-do-site{
+padding:80px 4%; /*Espaçamento da seção*/
+}
+
+/*=========================
+TEXTO
+=========================*/
+
+.txt-topo-site{
+width:50%; /*Metade da tela*/
+max-width:600px; /*Limite máximo*/
+margin-left:50px; /*Move direita*/
+}
+
+/*=========================
+NOME
+=========================*/
+
+.txt-topo-site h1{
+font-size:45px; /*Tamanho nome*/
+line-height:70px; /*Espaço linhas*/
+margin-top:10px; /*Espaço acima*/
+font-weight:700; /*Fonte grossa*/
+color:#fff; /*Branco*/
+}
+
+/*=========================
+GABRIELLY
+=========================*/
+
+.txt-topo-site .purple{
+color:#7b2cff; /*Roxo*/
+font-size:78px; /*Maior*/
+font-weight:700;
+text-shadow:
+0 0 10px #792cff49, /*Glow pequeno*/
+0 0 20px #792cff49, /*Glow médio*/
+0 0 40px #792cff70; /*Glow grande*/
+}
+
+/*=========================
+FRONT-END
+=========================*/
+
+.txt-topo-site h2{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:400;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.txt-topo-site .tag{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    line-height:1;
+    color:#7b2cff;
+    font-weight:600;
+    text-shadow:
+    0 0 10px #792cff00,
+    0 0 20px #792cff00;
+}
+
+/*=========================
+DESCRIÇÃO
+=========================*/
+
+.txt-topo-site p{
+margin-top:25px;
+font-size:16px;
+line-height:30px; /*Espaço linhas*/
+color:#fff;
+max-width:500px; /*Limite largura*/
+}
+
+/*=========================
+BOTÃO TOPO
+=========================*/
+
+.topo-do-site .sg-contato{
+margin-top:35px; /*Espaço acima*/
+}
+
+.topo-do-site .sg-contato button{
+padding:14px 38px;
+background:#6a00f4;
+color:white;
+border:none;
+border-radius:30px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.topo-do-site .sg-contato button:hover{
+box-shadow:
+0 0 20px #6a00f4,
+0 0 40px #6a00f4;
+transform:scale(1.05);
+}
+
+/*=========================
+FOTO
+=========================*/
+
+.img-topo-site{
+width:50%; /*Metade da tela*/
+display:flex; /*Ativa flex*/
+justify-content:flex-end; /*Joga direita*/
+margin-right:100px; /*Move esquerda*/
+margin-top:20px; /*Move baixo*/
+}
+
+/*=========================
+IMAGEM
+=========================*/
+
+.img-topo-site img{
+max-width:400px; /*Tamanho máximo*/
+width:100%; /*Responsivo*/
+border-radius:50%; /*Circular*/
+border:4px solid #6a00f4; /*Borda roxa*/
+box-shadow:
+0 0 8px #6a00f4, /*Glow pequeno*/
+0 0 15px #6a00f4, /*Glow médio*/
+0 0 25px #6a00f4; /*Glow maior*/
+}
+
+/*=========================
+ESPECIALIDADES
+=========================*/
+
+section.especialidades{
+    padding:180px 4%;
+    scroll-margin-top: 150px;
+}
+
+section.especialidades .flex{
+    display: flex; /* <-- Ativa o Flexbox */
+    gap:60px; /*Espaço entre os boxes*/
+    justify-content: center; /* <-- Centraliza as caixas na tela */
+    align-items: stretch; /* <-- Faz todas as caixas terem a mesma altura */
+}
+
+.especialidades .especialidades-box{
+    flex: 1; /* <-- Garante que as 3 caixas tenham a mesma largura */
+    color:#fff;
+    padding:20px;   
+    border: 2px solid #fff;
+    margin-top: 20px;
+    border-radius: 20px; /*Borda arredondada*/
+    transition: .2s; /*Animação suave*/
+    display: flex; /* <-- Organiza o conteúdo interno */
+    flex-direction: column; /* <-- Deixa os elementos em coluna */
+    justify-content: flex-start; /* <-- Mantém tudo alinhado no topo */
+}
+
+.especialidades .especialidades-box:hover{
+    border-color: #7b2cff; /*Borda roxa ao passar mouse*/
+    box-shadow: 0 0 15px #792cff94; /*Glow roxo*/
+    transform: scale(1.05); /*Zoom ao passar mouse*/
+}
+
+.especialidades .especialidades-box i{
+    font-size:55px;
+    color:#7b2cff;
+    margin-bottom:20px; /*Espaço abaixo*/
+}
+
+.especialidades .especialidades-box h3{
+    font-size:30px;
+    margin: 15px 0; /*Espaço acima e abaixo*/     
+}
+
+/*=========================
+SOBRE
+=========================*/
+
+section.sobre {
+    padding: 40px 4%;
+    scroll-margin-top: 150px;
+}
+
+section.sobre .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Foto */
+.sobre .img-sobre {
+    flex-shrink: 0;
+}
+
+.sobre .img-sobre img {
+    display: block;
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid #6a00f4;
+    box-shadow:
+        0 0 7px #6a00f4,
+        0 0 10px #6a00f4;
+}
+
+/* Texto */
+.sobre .txt-sobre {
+    flex: 1;
+    min-width: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sobre .txt-sobre p {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    transform: none;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+
+/* Redes sociais */
+.sobre .sg-social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sobre .sg-social button {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    transform: none;
+    background: #6a00f4;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.sg-social a {
+    text-decoration: none;
+}
+
+
+/*=========================
+PROJETOS
+=========================*/
+
+section.projetos{
+    padding:80px 4%;
+    scroll-margin-top: 150px;/*Espaçamento da seção*/
+}
+
+section.projetos .flex{
+    display: flex;/* Certifique-se de que o display flex está ativo */
+    justify-content: space-around; /* Corrigido: a palavra 'space' duplicada foi removida */
+    gap: 20px;/* Espaço entre os projetos */
+}
+
+.img-port{
+    width:360px;
+    height:460px;
+
+    background-size:cover;
+    background-position:center;
+
+    border-radius:20px;
+    border:2px solid #6a00f4;
+
+    transition:.3s;
+}
+
+.img-port:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 20px #6a00f4;
+}
+
+/* =========================
+CONTATOS
+========================= */
+
+/* =========================
+CONTATOS
+========================= */
+
+/* O CONTAINER PAI: Centraliza o título e o formulário na tela */
+.contatos {
+    display: flex;
+    flex-direction: column;   /* Coloca o título em cima e o form embaixo */
+    align-items: center;      /* Centraliza na horizontal */
+    justify-content: center;  /* Centraliza na vertical */
+    min-height: 100vh;        /* Faz a seção ocupar a altura inteira da tela */
+    width: 100%;
+    box-sizing: border-box;  
+}
+
+/* O FORMULÁRIO: Centraliza os inputs e o botão entre si */
+.contatos-mensagem {
+    display: flex;
+    flex-direction: column; /* Coloca os inputs e o botão um abaixo do outro */
+    align-items: center; /* Centraliza os inputs e o botão horizontalmente */
+    width: 100%; /* Necessário para o 'width: 50%' dos campos funcionar */
+}
+
+.contatos-titulo {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.campo-form {
+    width: 50%; /* Ocupa metade da largura da tela */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;/* Garante que o padding não faça o input passar de 50% */
+}
+
+/* Evita que o usuário mude o tamanho do textarea de forma que quebre o layout */
+textarea.campo-form {
+    resize: none; 
+}
+
+.campo-form:focus {
+    border-color: #7b2cff;
+    box-shadow: 0 0 10px #792cff94;
+    outline: none;
+}
+
+.botao-form {
+    padding: 12px 40px;
+    background-color: #6a00f4;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;/* Transforma a seta do mouse em "mãozinha" */
+    transition: transform 0.2s, box-shadow 0.2s; /* Deixa a animação do hover suave */
+}
+
+.botao-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px #6a00f4;
+}
+
+/*=========================
+RODAPE
+=========================*/
+
+footer{
+    padding: 60px 0;
+    text-align: center;
+}
+
+footer .flex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1280px;
+    margin:auto;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda{
+    border-top:2px solid #6a00f4;
+    width:1280px;
+    max-width:90%;
+    margin:auto;
+}
+
+footer .line-footer p i{
+    color: #6a00f4;
+    font-size: 16px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+    font-size: 14px;
+}
+
+footer .rodape p{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+```css
+/* =========================
+   PROJETOS DO PORTFÓLIO
+========================= */
+
+section.projetos {
+    padding: 100px 4%;
+    scroll-margin-top: 100px;
+}
+
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projeto-card {
+    width: 360px;
+    max-width: 100%;
+    overflow: hidden;
+    background: #0d0d0d;
+    border: 1px solid #292929;
+    border-radius: 20px;
+    transition: .3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    border-color: #7b2cff;
+    box-shadow: 0 0 25px #6a00f433;
+}
+
+/* Imagem de prévia */
+
+.projeto-imagem {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: .4s ease;
+}
+
+.projeto-card:hover .projeto-imagem img {
+    transform: scale(1.05);
+}
+
+/* Efeito ao passar o mouse */
+
+.projeto-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #050505c9;
+    color: white;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.projeto-overlay i {
+    font-size: 35px;
+    color: #a66bff;
+}
+
+.projeto-imagem:hover .projeto-overlay {
+    opacity: 1;
+}
+
+/* Informações */
+
+.projeto-info {
+    padding: 25px;
+}
+
+.projeto-categoria {
+    color: #a66bff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.projeto-info h3 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.projeto-info p {
+    color: #c5c5c5;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Tecnologias */
+
+.projeto-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.projeto-tecnologias span {
+    padding: 6px 12px;
+    color: #c8a7ff;
+    background: #6a00f41c;
+    border: 1px solid #6a00f455;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Botão */
+
+.projeto-botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: white;
+    background: #6a00f4;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.projeto-botao:hover {
+    background: #7b2cff;
+    box-shadow: 0 0 18px #6a00f466;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    section.projetos {
+        padding: 60px 5%;
+    }
+
+    .projeto-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .projeto-imagem {
+        height: 220px;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE DO PORTFÓLIO
+   (Adicione no final do seu style.css)
+========================================= */
+
+/* Ajustes gerais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.interface {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2.titulo {
+    font-size: clamp(32px, 5vw, 55px);
+}
+
+/* =========================================
+   TABLETS E DISPOSITIVOS MÓVEIS (<= 1024px)
+========================================= */
+
+@media (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 20px 4%;
+    }
+
+    header nav ul li {
+        padding: 0 10px;
+    }
+
+    /* Topo do site */
+    .flex {
+        gap: 40px;
+    }
+
+    .txt-topo-site {
+        margin-left: 0;
+    }
+
+    .img-topo-site {
+        margin-right: 0;
+    }
+}
+
+/* =========================================
+   SMARTPHONES (<= 768px)
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    header > .interface {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header nav ul li {
+        padding: 5px 10px;
+    }
+
+    /* Topo do Site */
+    section.topo-do-site {
+        padding: 40px 4%;
+    }
+
+    section.topo-do-site .flex {
+        flex-direction: column-reverse; /* Foto no topo ou em cima do texto */
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .txt-topo-site,
+    .img-topo-site {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .txt-topo-site h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .txt-topo-site .purple {
+        font-size: 48px;
+    }
+
+    .txt-topo-site h2 {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .txt-topo-site p {
+        max-width: 100%;
+    }
+
+    .img-topo-site img {
+        max-width: 260px;
+    }
+
+    /* Especialidades */
+    section.especialidades {
+        padding: 60px 4%;
+    }
+
+    section.especialidades .flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .especialidades .especialidades-box {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Sobre */
+    section.sobre {
+        padding: 60px 4%;
+    }
+
+    section.sobre .flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .sobre .txt-sobre {
+        align-items: center;
+    }
+
+    .sobre .img-sobre img {
+        width: 260px;
+    }
+
+    /* Projetos */
+    section.projetos {
+        padding: 60px 4%;
+    }
+
+    .projeto-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .projeto-imagem {
+        height: 200px;
+    }
+
+    /* Contatos */
+    .contatos {
+        min-height: auto;
+        padding: 60px 4%;
+    }
+
+    .campo-form {
+        width: 100%; /* Ocupa a largura total no mobile */
+    }
+
+    /* Rodapé */
+    footer .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .borda {
+        width: 100%;
+    }
+}
